@@ -15,14 +15,14 @@ import org.json.JSONObject;
 /**
  * <strong>This class is deprecated. Currently it isn't used by the library itself, although it wasn't
  * removed, to maintain backward compatiblity.</strong>
- * <p>
+ * <p></p>
  * <p>
  * Used by {@code org.everit.json.schema.loader.SchemaLoader.SchemaLoader} during schema loading for
  * type-based action selections. In other words this utility class is used for avoiding
  * {@code if..instanceof..casting} constructs. Together with the {@link OnTypeConsumer}
  * implementations it forms a fluent API to deal with the parts of the JSON schema where multiple
  * kind of values are valid for a given key.
- * <p>
+ * </p>
  * Example usage: <code>
  * Object additProps = schemaJson.get("additionalProperties");
  * typeMultiplexer(additionalProps)

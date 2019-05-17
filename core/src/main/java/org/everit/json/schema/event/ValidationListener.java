@@ -22,6 +22,10 @@ public interface ValidationListener {
      * {@code "oneOf"} schema) can be referenced by calling {@link CombinedSchemaMatchEvent#getSchema()} and the
      * matching subschema is returned by {@link CombinedSchemaMatchEvent#getSubSchema()}.
      * </p>
+     * 
+     * @param event
+     * 		The event
+     * 
      */
     default void combinedSchemaMatch(CombinedSchemaMatchEvent event) {
     }
@@ -41,6 +45,10 @@ public interface ValidationListener {
      * {@code "oneOf"} schemas it can be an intermediate failure while the root-level schema validation still
      * passes.</em>
      * </p>
+     * 
+     * @param event
+     * 		The event
+     * 
      */
 
     default void combinedSchemaMismatch(CombinedSchemaMismatchEvent event) {
@@ -53,6 +61,9 @@ public interface ValidationListener {
      * {@link org.everit.json.schema.ReferenceSchema "$ref"} itself is returned by
      * {@link SchemaReferencedEvent#getSchema()}
      * </p>
+     * 
+     * @param event
+     * 		The event
      */
     default void schemaReferenced(SchemaReferencedEvent event) {
     }
@@ -71,6 +82,9 @@ public interface ValidationListener {
      * {@link org.everit.json.schema.ConditionalSchema} will succeed. Instead it means that the evaluation continues
      * with the {@code "then"} schema.</em>
      * </p>
+     * 
+     * @param event
+     * 		The event
      */
     default void ifSchemaMatch(ConditionalSchemaMatchEvent event) {
     }
@@ -89,6 +103,9 @@ public interface ValidationListener {
      * {@link org.everit.json.schema.ConditionalSchema} will fail. Instead it means that the evaluation continues
      * with the {@code "else"} schema.</em>
      * </p>
+     * 
+     * @param event
+     * 		The event
      */
     default void ifSchemaMismatch(ConditionalSchemaMismatchEvent event) {
     }
@@ -101,6 +118,9 @@ public interface ValidationListener {
      * {@link ConditionalSchemaMatchEvent#getKeyword()} always returns
      * {@link org.everit.json.schema.event.ConditionalSchemaValidationEvent.Keyword#THEN} in this method.
      * </p>
+     * 
+     * @param event
+     * 		The event
      */
     default void thenSchemaMatch(ConditionalSchemaMatchEvent event) {
     }
@@ -113,6 +133,9 @@ public interface ValidationListener {
      * {@link ConditionalSchemaMatchEvent#getKeyword()} always returns
      * {@link org.everit.json.schema.event.ConditionalSchemaValidationEvent.Keyword#THEN} in this method.
      * </p>
+     * 
+     * @param event
+     * 		The event
      */
     default void thenSchemaMismatch(ConditionalSchemaMismatchEvent event) {
     }
@@ -125,6 +148,9 @@ public interface ValidationListener {
      * {@link ConditionalSchemaMatchEvent#getKeyword()} always returns
      * {@link org.everit.json.schema.event.ConditionalSchemaValidationEvent.Keyword#ELSE} in this method.
      * </p>
+     * 
+     * @param event
+     * 		The event
      */
     default void elseSchemaMatch(ConditionalSchemaMatchEvent event) {
 
@@ -138,6 +164,9 @@ public interface ValidationListener {
      * {@link ConditionalSchemaMatchEvent#getKeyword()} always returns
      * {@link org.everit.json.schema.event.ConditionalSchemaValidationEvent.Keyword#ELSE} in this method.
      * </p>
+     * 
+     * @param event
+     * 		The event
      */
     default void elseSchemaMismatch(ConditionalSchemaMismatchEvent event) {
     }

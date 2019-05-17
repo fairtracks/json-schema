@@ -17,6 +17,11 @@ public class OrgJsonUtil {
 
     /**
      * Used as a replacement of {@code JSONObject#toMap()} (which doesn't exist in the android version of org.json).
+     * 
+     * @param obj
+     * 		The {@code JSONObject} instance
+     * @return
+     * 		The map with the information stored in the param
      */
     public static Map<String, Object> toMap(JSONObject obj) {
         Map<String, Object> rval = new HashMap<>(obj.length());
@@ -44,6 +49,10 @@ public class OrgJsonUtil {
 
     /**
      * Used as a replacement of {@code JSONArray#toList()} (which doesn't exist in the android version of org.json).
+     * 
+     * @param arr
+     * 		The {@code JSONArray} instance to translate into a {@code List}
+     * @return The output {@code List}
      */
     public static List<Object> toList(JSONArray arr) {
         List<Object> rval = new ArrayList<>(arr.length());

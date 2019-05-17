@@ -94,8 +94,8 @@ public class SchemaLoader {
          * @param formatValidator
          *         the object performing the validation for schemas which use the {@code formatName} format
          * @return {@code this}
-         * @deprecated instead it is better to override {@link FormatValidator#formatName()}
-         * and use {@link #addFormatValidator(FormatValidator)}
+         * @deprecated instead it is better to override {@link AbstractFormatValidator#formatName()}
+         * and use {@link #addFormatValidator(AbstractFormatValidator)}
          */
         @Deprecated
         public SchemaLoaderBuilder addFormatValidator(String formatName,
@@ -151,6 +151,10 @@ public class SchemaLoader {
 
         /**
          * @deprecated use {@link #schemaClient(SchemaClient)} instead
+         * 
+         * @param httpClient
+         * 	The {@code SchemaClient} instance
+         * @return The called instance
          */
         @Deprecated
         public SchemaLoaderBuilder httpClient(SchemaClient httpClient) {

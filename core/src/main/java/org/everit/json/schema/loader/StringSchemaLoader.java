@@ -24,6 +24,9 @@ public class StringSchemaLoader {
      * Creates an instance with {@link SpecificationVersion#defaultFormatValidators()}  draft v4 format validators}.
      *
      * @deprecated explicitly specify the format validators with {@link #StringSchemaLoader(LoadingState, Map)} instead
+     * 
+     * @param ls
+     * 		The loading state
      */
     @Deprecated
     public StringSchemaLoader(LoadingState ls) {

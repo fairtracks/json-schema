@@ -39,6 +39,10 @@ public class URIFormatValidator implements FormatValidator {
 
     /**
      * @deprecated use {@code Optional.of(String.format("[%s] is not a valid URI", subject))} instead
+     * 
+     * @param subject
+     * 		the value which did not validate
+     * @return the error string
      */
     @Deprecated
     protected Optional<String> failure(String subject) {

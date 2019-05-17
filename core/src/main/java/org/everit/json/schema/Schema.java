@@ -60,6 +60,12 @@ public abstract class Schema {
 
         /**
          * @deprecated Use {@link #schemaLocation(SchemaLocation)} instead.
+         * 
+         * @param schemaLocation
+         * 	The location of the schema (most of the time an unparsed URI)
+         * 
+         * @return The builder for this schema element based on the schema
+         * 
          */
         @Deprecated
         public Builder<S> schemaLocation(String schemaLocation) {
@@ -267,6 +273,8 @@ public abstract class Schema {
     /**
      * Returns the properties of the original schema JSON which aren't keywords of json schema
      * (therefore they weren't recognized during schema loading).
+     * 
+     * @return A read only version of the unprocessed properties in this JSON schema context
      */
     public Map<String, Object> getUnprocessedProperties() {
         return unmodifiableMap(unprocessedProperties);
