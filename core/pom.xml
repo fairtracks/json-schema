@@ -103,54 +103,7 @@
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>4.3.0</version>
             </plugin>
-            <plugin>
-                <groupId>com.github.siom79.japicmp</groupId>
-                <artifactId>japicmp-maven-plugin</artifactId>
-                <version>0.13.0</version>
-                <configuration>
-                    <oldVersion>
-                        <dependency>
-                            <groupId>com.github.everit-org.json-schema</groupId>
-                            <artifactId>org.everit.json.schema</artifactId>
-                            <version>1.11.1</version>
-                            <type>jar</type>
-                        </dependency>
-                    </oldVersion>
-                    <newVersion>
-                        <file>
-                            <path>${project.build.directory}/${project.artifactId}-${project.version}.jar</path>
-                        </file>
-                    </newVersion>
-                    <parameter>
-                        <skipDiffReport>true</skipDiffReport>
-                        <skipXmlReport>true</skipXmlReport>
-                        <breakBuildOnSourceIncompatibleModifications>
-                            true
-                        </breakBuildOnSourceIncompatibleModifications>
-                        <overrideCompatibilityChangeParameters>
-                            <overrideCompatibilityChangeParameter>
-                                <compatibilityChange>METHOD_NEW_DEFAULT</compatibilityChange>
-                                <binaryCompatible>true</binaryCompatible>
-                                <sourceCompatible>true</sourceCompatible>
-                            </overrideCompatibilityChangeParameter>
-                            <overrideCompatibilityChangeParameter>
-                                <compatibilityChange>METHOD_ABSTRACT_NOW_DEFAULT</compatibilityChange>
-                                <binaryCompatible>true</binaryCompatible>
-                                <sourceCompatible>true</sourceCompatible>
-                            </overrideCompatibilityChangeParameter>
-                        </overrideCompatibilityChangeParameters>
-                    </parameter>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>cmp</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
+           <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
                 <version>1.6.7</version>
